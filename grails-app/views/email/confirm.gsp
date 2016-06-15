@@ -12,5 +12,10 @@
     Thank you for your registration.
 </p>
 
+<p>
+    To use the application can you directly go to the
+    <g:link absolute="true" controller="index">home page</g:link>.
+</p>
+
 </body>
 </html>
