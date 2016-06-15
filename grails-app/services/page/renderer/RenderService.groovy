@@ -4,9 +4,11 @@ package page.renderer
 class RenderService {
 
     def groovyPageRenderer
+    def grailsLinkGenerator
 
     def createConfirmMessage() {
-        groovyPageRenderer.render view: '/email/confirm', model: [ username: findUsername() ]
+        def homePageLink = grailsLinkGenerator.link(controller: 'index', absolute: true)
+        groovyPageRenderer.render view: '/email/confirm', model: [ link: homePageLink, username: findUsername() ]
     }
 
     def createWelcomeMessage() {
